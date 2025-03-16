@@ -51,7 +51,7 @@ public class WordCount
         Pipeline pipeline = Pipeline.create();
 
         // Read input text file
-        pipeline.apply("ReadLines", TextIO.read().from("/Users/alirezamahzoon/Documents/repo/beam-tutorial/src/main/resources/input.txt"))
+        pipeline.apply("ReadLines", TextIO.read().from("/Users/alirezamahzoon/Documents/repo/GCP/beam/src/main/resources/input.txt"))
 
                 // Split lines into words
                 .apply("ExtractWords", FlatMapElements.into(TypeDescriptors.strings())
